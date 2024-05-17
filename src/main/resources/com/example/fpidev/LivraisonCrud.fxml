@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fpidevCode.LivraisonCrud">
+   <children>
+      <Pane layoutX="-3.0" prefHeight="500.0" prefWidth="200.0" style="-fx-background-color: red;">
+         <children>
+             <ImageView fitHeight="95.0" fitWidth="200.0" layoutX="43.0" pickOnBounds="true" preserveRatio="true">
+                 <image>
+                     <Image url="@../IMG/logofoody.png" />
+                 </image>
+                 <effect>
+                     <ColorAdjust brightness="-0.12" contrast="1.0" hue="0.02" saturation="0.24" />
+                 </effect></ImageView>
+            <Text fill="#f2ecec" layoutX="88.0" layoutY="202.0" onMouseClicked="#GoReservation" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservation" />
+            <Text fill="#f8f3f3" layoutX="91.0" layoutY="250.0" onMouseClicked="#openLivreur" strokeType="OUTSIDE" strokeWidth="0.0" text="Livreur" wrappingWidth="61.640625" />
+            <Text fill="#fcf7f7" layoutX="89.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Livraison">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Text>
+            <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="46.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMG/reservation.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="46.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMG/teamwork.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="46.0" layoutY="276.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMG/fast-delivery.png" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_LEFT" layoutX="11.0" layoutY="103.0" prefHeight="17.0" prefWidth="182.0" text="Votre satisfaction, notre destination" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="216.0" layoutY="128.0" prefHeight="284.0" prefWidth="528.0">
+        <columns>
+          <TableColumn fx:id="nomCo" prefWidth="111.0" style="-fx-background-color: #f88763;" text="Nom Du Client" />
+          <TableColumn fx:id="addressCo" prefWidth="119.0" style="-fx-background-color: #f88763;" text="Adresse" />
+            <TableColumn fx:id="dateCo" prefWidth="120.0" style="-fx-background-color: #f88763;" text="Date De Livraison" />
+            <TableColumn fx:id="statusCo" prefWidth="87.0" style="-fx-background-color: #f88763;" text="Statut" />
+            <TableColumn fx:id="commandeCo" prefWidth="106.0" style="-fx-background-color: #f88763;" text="Commande" />
+        </columns>
+      </TableView>
+      <Button layoutX="626.0" layoutY="27.0" mnemonicParsing="false" onAction="#addLivraison" prefHeight="39.0" prefWidth="101.0" style="-fx-background-color: #f88763;" text="Add" />
+      <Text layoutX="216.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Livraison" wrappingWidth="109.13671875">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="modifierButton" layoutX="249.0" layoutY="429.0" mnemonicParsing="false" onAction="#modifierLivraison" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #f88763;" text="Modifier" />
+      <Button fx:id="supprimerButton" layoutX="340.0" layoutY="429.0" mnemonicParsing="false" onAction="#supprimerLivraison" prefHeight="25.0" prefWidth="75.0" style="-fx-background-color: #f88763;" text="Supprimer" />
+   </children>
+</AnchorPane>

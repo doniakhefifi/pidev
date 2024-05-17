@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fpidevCode.ClientController">
+   <children>
+      <BorderPane layoutY="-2.0" prefHeight="505.0" prefWidth="200.0" style="-fx-background-color: #D30011;">
+         <center>
+            <AnchorPane prefHeight="289.0" prefWidth="208.0" style="-fx-background-color: #D30011;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="BtnProfile" layoutX="74.0" layoutY="173.0" mnemonicParsing="false" onAction="#GoProfile" prefHeight="40.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Profile" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnLivraioson" layoutX="67.0" layoutY="82.0" mnemonicParsing="false" onAction="#GoLivraisonFront" prefHeight="40.0" prefWidth="74.0" style="-fx-background-color: transparent;" text="Livraison" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btntickets" layoutX="58.0" layoutY="127.0" mnemonicParsing="false" onAction="#Gotickets" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: transparent;" text="Buy tickets" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <ImageView fitHeight="104.0" fitWidth="126.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../IMG/foody.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets top="30.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </top>
+         <bottom>
+            <Button fx:id="logout" mnemonicParsing="false" onAction="#deconnecterButtonOnClick" prefHeight="40.0" prefWidth="168.0" style="-fx-background-color: transparent;" text="Logout" textFill="WHITE" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets bottom="30.0" />
+               </BorderPane.margin>
+            </Button>
+         </bottom>
+      </BorderPane>
+      <Pane fx:id="profilePane" layoutX="202.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label fx:id="name" layoutX="122.0" layoutY="42.0" text="Label" />
+            <Label layoutX="50.0" layoutY="42.0" text="Nom" />
+            <Label layoutX="50.0" layoutY="81.0" text="Prenon" />
+            <Label layoutX="53.0" layoutY="118.0" text="Email" />
+            <Label fx:id="prenon" layoutX="122.0" layoutY="81.0" text="Label" />
+            <Label fx:id="email" layoutX="122.0" layoutY="118.0" text="Label" />
+         </children>
+      </Pane>
+      <AnchorPane fx:id="ContentPane" layoutX="200.0" layoutY="1.0" prefHeight="500.0" prefWidth="600.0" />
+      <Label alignment="TOP_LEFT" layoutX="8.0" layoutY="132.0" prefHeight="17.0" prefWidth="182.0" text="Votre satisfaction, notre destination" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Label>
+      <Pane fx:id="ticketsPane" layoutX="199.0" prefHeight="500.0" prefWidth="600.0" />
+   </children>
+</Pane>

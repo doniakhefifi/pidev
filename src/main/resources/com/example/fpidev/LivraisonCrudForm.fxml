@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="485.0" prefWidth="741.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fpidevCode.LivraisonCrudForm">
+   <children>
+      <Pane layoutX="-5.0" prefHeight="485.0" prefWidth="200.0" style="-fx-background-color: red;">
+         <children>
+            <ImageView fitHeight="95.0" fitWidth="200.0" layoutX="41.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../IMG/logofoody.png" />
+               </image></ImageView>
+            <Text fill="#f5f2f2" layoutX="67.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Acceuil" wrappingWidth="75.13671875" />
+            <Text fill="#ebebeb" layoutX="69.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" />
+            <Text fill="#f5f2f2" layoutX="69.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stock" />
+            <Text fill="#f2ecec" layoutX="69.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reservation" />
+            <Text fill="#f8f3f3" layoutX="69.0" layoutY="249.0" onMouseClicked="#openLivreur" strokeType="OUTSIDE" strokeWidth="0.0" text="Livreur" />
+            <Text fill="#fcf7f7" layoutX="69.0" layoutY="293.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Livraison" />
+         </children>
+      </Pane>
+      <Button layoutX="611.0" layoutY="366.0" mnemonicParsing="false" onAction="#submit" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #f88763;" text="Submit" />
+      <Text layoutX="209.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Livraison" wrappingWidth="134.13671875">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button layoutX="525.0" layoutY="366.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #f88763;" text="Cancel" />
+      <TextField fx:id="nomField" layoutX="308.0" layoutY="160.0" />
+      <Text layoutX="306.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Du Client" />
+      <Text layoutX="307.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date De Livraison" />
+      <TextField fx:id="addressField" layoutX="501.0" layoutY="160.0" />
+      <Text layoutX="499.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse" />
+      <Text layoutX="500.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Statut" />
+      <TextField fx:id="commandeField" layoutX="310.0" layoutY="300.0" />
+      <Text layoutX="308.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commande" />
+      <DatePicker fx:id="dateField" layoutX="307.0" layoutY="233.0" prefHeight="25.0" prefWidth="149.0" />
+      <ComboBox fx:id="statusCombo" layoutX="501.0" layoutY="233.0" prefWidth="150.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="En Attente" />
+               <String fx:value="En cours" />
+               <String fx:value="Terminer" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <Text layoutX="501.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Livreur" />
+      <ComboBox fx:id="livreurCombo" layoutX="502.0" layoutY="297.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
